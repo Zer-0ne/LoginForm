@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <section class="form" >
+        <div  class="signup">
+            <div class="top">
+                <input type="button" class="moveBtn action" id="moveBtn" value="SignUp">
+                <input type="button" id="signBtn" class=" Topbtn" id="signBtn" value="SignUp">
+                <!-- adding action class throug js -->
+                <input type="button" id="loginBtn" class="Topbtn" value="Login">
+            </div>
+            <div class="not_match">
+                <h6 class="warning ">
+                    <%=warning%>
+                    
+                </h6>
+                <h6 class="sucess">
+                    <%=secuss%>
+                </h6>
+            </div>
+            <form action="/signup" method="post" class="signUpInput">
+                <input type="text" class="input " name="firstname" id="firstname" placeholder="First name">
+                <input type="number" class="input " name="lastname" id="lastname" placeholder="Phone number">
+                <input type="email" class="input " name="email_address" id="email_address" placeholder="Email address">
+                <input type="password" class="input " name="password" id="password" placeholder="Create new password">
+                <input type="password" class="input " name="cpassword" id="cpassword" placeholder="Comfirm password">
+                <input type="submit" class=" signupBtn" value="singup" id="signupBtn">
+            </form>
+            <form action="/login" method="post" class="loginInput">
+                <input type="email" class="input " name="login_email_address" id="login_email_address"
+                    placeholder="Email address">
+                <input type="password" class="input " name="login_password" id="login_password" placeholder="Password">
+                <input type="submit" class="signupBtn" value="login" id="loginBtn">
+                <!-- <a href="">Forgot password?</a> -->
+            </form>
+        </div>
+    </section>
+</body>
+<script src="script/script.js"></script>
+
+</html>
